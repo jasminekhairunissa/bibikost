@@ -2352,6 +2352,7 @@ return array(
     'Prophecy\\Doubler\\ClassPatch\\ProphecySubjectPatch' => $vendorDir . '/phpspec/prophecy/src/Prophecy/Doubler/ClassPatch/ProphecySubjectPatch.php',
     'Prophecy\\Doubler\\ClassPatch\\ReflectionClassNewInstancePatch' => $vendorDir . '/phpspec/prophecy/src/Prophecy/Doubler/ClassPatch/ReflectionClassNewInstancePatch.php',
     'Prophecy\\Doubler\\ClassPatch\\SplFileInfoPatch' => $vendorDir . '/phpspec/prophecy/src/Prophecy/Doubler/ClassPatch/SplFileInfoPatch.php',
+    'Prophecy\\Doubler\\ClassPatch\\ThrowablePatch' => $vendorDir . '/phpspec/prophecy/src/Prophecy/Doubler/ClassPatch/ThrowablePatch.php',
     'Prophecy\\Doubler\\ClassPatch\\TraversablePatch' => $vendorDir . '/phpspec/prophecy/src/Prophecy/Doubler/ClassPatch/TraversablePatch.php',
     'Prophecy\\Doubler\\DoubleInterface' => $vendorDir . '/phpspec/prophecy/src/Prophecy/Doubler/DoubleInterface.php',
     'Prophecy\\Doubler\\Doubler' => $vendorDir . '/phpspec/prophecy/src/Prophecy/Doubler/Doubler.php',

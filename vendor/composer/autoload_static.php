@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitaddc8849914ac2175f289845f621f6b7
+class ComposerStaticInit87e10d05f4d00489a2d68d38b5cd5bde
 {
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
@@ -2665,6 +2665,7 @@ class ComposerStaticInitaddc8849914ac2175f289845f621f6b7
         'Prophecy\\Doubler\\ClassPatch\\ProphecySubjectPatch' => __DIR__ . '/..' . '/phpspec/prophecy/src/Prophecy/Doubler/ClassPatch/ProphecySubjectPatch.php',
         'Prophecy\\Doubler\\ClassPatch\\ReflectionClassNewInstancePatch' => __DIR__ . '/..' . '/phpspec/prophecy/src/Prophecy/Doubler/ClassPatch/ReflectionClassNewInstancePatch.php',
         'Prophecy\\Doubler\\ClassPatch\\SplFileInfoPatch' => __DIR__ . '/..' . '/phpspec/prophecy/src/Prophecy/Doubler/ClassPatch/SplFileInfoPatch.php',
+        'Prophecy\\Doubler\\ClassPatch\\ThrowablePatch' => __DIR__ . '/..' . '/phpspec/prophecy/src/Prophecy/Doubler/ClassPatch/ThrowablePatch.php',
         'Prophecy\\Doubler\\ClassPatch\\TraversablePatch' => __DIR__ . '/..' . '/phpspec/prophecy/src/Prophecy/Doubler/ClassPatch/TraversablePatch.php',
         'Prophecy\\Doubler\\DoubleInterface' => __DIR__ . '/..' . '/phpspec/prophecy/src/Prophecy/Doubler/DoubleInterface.php',
         'Prophecy\\Doubler\\Doubler' => __DIR__ . '/..' . '/phpspec/prophecy/src/Prophecy/Doubler/Doubler.php',
@@ -3704,10 +3705,10 @@ class ComposerStaticInitaddc8849914ac2175f289845f621f6b7
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitaddc8849914ac2175f289845f621f6b7::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitaddc8849914ac2175f289845f621f6b7::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInitaddc8849914ac2175f289845f621f6b7::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInitaddc8849914ac2175f289845f621f6b7::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit87e10d05f4d00489a2d68d38b5cd5bde::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit87e10d05f4d00489a2d68d38b5cd5bde::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit87e10d05f4d00489a2d68d38b5cd5bde::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit87e10d05f4d00489a2d68d38b5cd5bde::$classMap;
 
         }, null, ClassLoader::class);
     }

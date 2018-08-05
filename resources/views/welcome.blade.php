@@ -91,5 +91,6 @@
                 </div>
             </div>
         </div>
+        include(app_path().'/includes/home.php');
     </body>
 </html>
