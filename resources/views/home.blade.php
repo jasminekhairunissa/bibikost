@@ -1,7 +1,8 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
   <title>Bibi Kost - Kriteriamu Prioritas Kami</title>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
     body {
       background-image: url("room4.png");
@@ -48,65 +49,33 @@
       font-size: 16px;
       margin: 4px 2px;
       cursor: pointer;
+      border-radius: 10px;
     }
     .signin {
       position: relative;
-      top: 450px;
+      top: 50px;
       text-align: center;
     }
-    .box  {
-      border-radius: 10px;
-      width: 500px;
-      height: 430px;
-      text-align: left;
+    .logo {
       position: relative;
+      text-align: center;
       top: 50px;
-      left: 430px;
-      background-color: rgba(255, 255, 255, 0.7);
-      font-family: Arial;
-    }
-    p {
-      padding: 10px;
-    }
-    input[type=text], select {
-      width: 100%;
-      padding: 12px 20px;
-      margin: 8px 0;
-      display: inline-block;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      box-sizing: border-box;
-    }
-    .masuk {
-      width: 100%;
-      background-color: #131F28;
-      color: white;
-      padding: 14px 20px;
-      margin: 8px 0;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
     }
     </style>
   </head>
   <body>
       <ul>
-        <li><a href="{{ url('/')}}">Home</a></li>
+        <li><a class="active" href="{{ url('/')}}">Home</a></li>
         <li><a href="{{ url('/carikosan')}}">Cari Kosan!</a></li>
         <li><a href="{{ url('/kerjasama')}}">Kerjasama</a></li>
         <li style="float:right"><a href="{{ url('/aboutus')}}">Tentang Kami</a></li>
-        <li style="float:right"><a class="active" href="{{ url('/login')}}">Log In</a></li>
+        <li style="float:right"><a href="{{ url('/login')}}">Log In</a></li>
       </ul>
-      <div class="box">
-        <form>
-          <p>Username: <br>
-          <input type="text" name="Username"></p>
-          <p>Password: <br>
-          <input type="text" name="Password"></p>
-          <p>Nomor Telepon: <br>
-          <input type="text" name="Nomor Telepon"></p>
-          <p><a href=homeuser.php><button class="masuk" value="homeuser.php" >Log In</button></a></p>
-        </form>
+      <div class="logo">
+        <img src="bikost.png" alt="Bibi Kost" width="400" height="400"></img>
+      </div>
+      <div class="signin">
+        <button class="button">Daftar Sekarang!</button>
       </div>
   </body>
 </html>
