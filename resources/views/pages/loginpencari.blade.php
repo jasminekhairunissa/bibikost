@@ -105,7 +105,7 @@
           <input type="text" name="Password"></p>
           <p>Nomor Telepon: <br>
           <input type="text" name="Nomor Telepon"></p>
-          <p><a href=homeuser.php><button class="masuk" value="homeuser.php" >Log In</button></a></p>
+          <p><a href="{{ url('/homeuserreg')}}"><button class="masuk" value="{{ url('/homeuserreg')}}" >Log In</button></a></p>
         </form>
       </div>
   </body>

@@ -1,7 +1,8 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
-  <title>Bibi Kost - Kriteriamu Prioritas Kami</title>
+  <title>BibiKost - Kriteriamu Prioritas Kami</title>
   <head>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
     body {
@@ -11,11 +12,11 @@
     }
     ul {
         list-style-type: none;
+        overflow: hidden;
         margin: 0;
         padding: 0;
-        overflow: hidden;
-        background-color: #FFC82C;
-        font-family: Arial;
+        background-color: rgba(0,0,0,0.5);
+        font-family: "Lato", sans-serif;
     }
 
     li {
@@ -37,7 +38,16 @@
     .active {
         background-color: #131F28;
     }
-
+    .box  {
+      border-radius: 10px;
+      height: 430px;
+      text-align: left;
+      position: relative;
+      top: 50px;
+      background-color: rgba(255, 255, 255, 0.7);
+      font-family: Arial;
+      padding: 10px;
+    }
     .button {
       background-color: #131F28;
       border: none;
@@ -61,21 +71,21 @@
       text-align: center;
       top: 50px;
     }
+    .navbar-logo {
+      width:130px;
+      height: 18px;
+      text-align: center;
+    }
+    .img-responsive {
+      height: auto;
+      width: 100%;
+      display: block;
+      padding: none;
+    }
+    .navbar{
+      width:  100%;
+      height: 20%;
+    }
     </style>
   </head>
-  <body>
-      <ul>
-        <li><a class="active" href="{{ url('/')}}">Home</a></li>
-        <li><a href="{{ url('/carikosan')}}">Cari Kosan!</a></li>
-        <li><a href="{{ url('/kerjasama')}}">Kerjasama</a></li>
-        <li style="float:right"><a href="{{ url('/aboutus')}}">Tentang Kami</a></li>
-        <li style="float:right"><a href="{{ url('/login')}}">Log In</a></li>
-      </ul>
-      <div class="logo">
-        <img src="bikost.png" alt="Bibi Kost" width="400" height="400"></img>
-      </div>
-      <div class="signin">
-        <button class="button">Daftar Sekarang!</button>
-      </div>
-  </body>
 </html>

@@ -12,23 +12,23 @@
 */
 
 Route::get('/', function () {
-    return view('home');
+    return view('pages.home');
 });
 
 Route::get('login', function () {
-    return view('login');
+    return view('pages.login');
 });
 
 Route::get('aboutus', function () {
-    return view('aboutus');
+    return view('pages.aboutus');
 });
 
 Route::get('kerjasama', function () {
-    return view('kerjasama');
+    return view('pages.kerjasama');
 });
 
 Route::get('carikosan', function () {
-    return view('carikosan');
+    return view('pages.carikosan');
 });
 
 Route::resource('post', 'PostController');
