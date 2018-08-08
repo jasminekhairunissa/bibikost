@@ -31,4 +31,11 @@ Route::get('carikosan', function () {
     return view('pages.carikosan');
 });
 
+Route::get('isidetailkost', function () {
+    return view('pages.isidetailkost');
+});
+
+Route::get('daftarproperti', function () {
+    return view('pages.daftarproperti');
+});
 Route::resource('post', 'PostController');

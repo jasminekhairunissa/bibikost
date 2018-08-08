@@ -1,3 +1,3 @@
 @extends ('layouts/default')
-@section ('content;)
+@section ('content')
 @stop

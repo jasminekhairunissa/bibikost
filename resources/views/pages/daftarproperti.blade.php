@@ -13,7 +13,7 @@
   <body>
     <div class="container-fluid">
     <div class="row">
-        <div class="col-md-8 offset-md-1">
+        <div class="col-md-8 offset-md-1 pt-2">
 			<form action="/action_page.php">
 			  <div class="form-group row">
 			    <label class="col-form-label col-sm-2" for="tipeprop">Tipe properti:</label>
