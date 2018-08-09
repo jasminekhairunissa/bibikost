@@ -31,6 +31,7 @@ Route::get('carikosan', function () {
     return view('pages.carikosan');
 });
 
+<<<<<<< HEAD
 Route::get('loginpemilik', function () {
     return view('pages.loginpemilik');
 });
@@ -50,4 +51,13 @@ Route::get('registerpemilik', function () {
     return view('pages.registerpemilik');
 });
 
+=======
+Route::get('isidetailkost', function () {
+    return view('pages.isidetailkost');
+});
+
+Route::get('daftarproperti', function () {
+    return view('pages.daftarproperti');
+});
+>>>>>>> 60985ab0fc14333b82892f745e61b5bd23f8b84a
 Route::resource('post', 'PostController');
