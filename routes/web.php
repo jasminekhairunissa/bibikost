@@ -40,3 +40,17 @@ Route::get('daftarproperti', function () {
 });
 
 Route::post('daftarproperti', 'PropertiController@add')->name('prop.store');
+
+Route::get('register', function () {
+    return view('pages.register');
+});
+
+Route::get('registerpemilik', function () {
+    return view('pages.registerpemilik');
+});
+
+Route::get('registerpencari', function () {
+    return view('pages.registerpencari');
+});
+
+Route::resource('post', 'PostController');
