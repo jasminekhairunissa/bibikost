@@ -31,27 +31,6 @@ Route::get('carikosan', function () {
     return view('pages.carikosan');
 });
 
-<<<<<<< HEAD
-Route::get('loginpemilik', function () {
-    return view('pages.loginpemilik');
-});
-
-Route::get('loginpencari', function () {
-    return view('pages.loginpencari');
-});
-
-Route::get('register', function () {
-    return view('pages.register');
-});
-
-Route::get('registerpencari', function () {
-    return view('pages.registerpencari');
-});
-Route::get('registerpemilik', function () {
-    return view('pages.registerpemilik');
-});
-
-=======
 Route::get('isidetailkost', function () {
     return view('pages.isidetailkost');
 });
@@ -59,5 +38,17 @@ Route::get('isidetailkost', function () {
 Route::get('daftarproperti', function () {
     return view('pages.daftarproperti');
 });
->>>>>>> 60985ab0fc14333b82892f745e61b5bd23f8b84a
+
+Route::get('register', function () {
+    return view('pages.register');
+});
+
+Route::get('registerpemilik', function () {
+    return view('pages.registerpemilik');
+});
+
+Route::get('registerpencari', function () {
+    return view('pages.registerpencari');
+});
+
 Route::resource('post', 'PostController');
