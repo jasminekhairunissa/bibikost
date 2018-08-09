@@ -31,4 +31,23 @@ Route::get('carikosan', function () {
     return view('pages.carikosan');
 });
 
+Route::get('loginpemilik', function () {
+    return view('pages.loginpemilik');
+});
+
+Route::get('loginpencari', function () {
+    return view('pages.loginpencari');
+});
+
+Route::get('register', function () {
+    return view('pages.register');
+});
+
+Route::get('registerpencari', function () {
+    return view('pages.registerpencari');
+});
+Route::get('registerpemilik', function () {
+    return view('pages.registerpemilik');
+});
+
 Route::resource('post', 'PostController');
