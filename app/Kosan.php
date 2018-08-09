@@ -12,7 +12,6 @@ class Kosan extends Model
         'harga',
         'dayatampung',
         'ukurankamar',
-        'tipekamar',
         'fasilitas',
     ];
     public function properti(){

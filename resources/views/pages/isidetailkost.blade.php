@@ -20,7 +20,7 @@
 			    	<label class="col-form-label col-sm-2" for="hargatahunan">Harga tahunan:</label>
 			    	<div class="col-sm-9">
 			    	  <div class="input-group">
-				    	  <input type="text" class="form-control" id="hargatahunan" placeholder="contoh: 7000000" aria-describedby="hargatahunanhelp">
+				    	  <input name="hargatahunan" type="text" class="form-control" id="hargatahunan" placeholder="contoh: 7000000" aria-describedby="hargatahunanhelp">
 				    	  <div class="input-group-prepend">
 					      	<div class="input-group-text">/tahun</i></div>
 					      </div>
@@ -32,7 +32,7 @@
 			    	<label class="col-form-label col-sm-2" for="hargabulanan">Harga bulanan:</label>
 			    	<div class="col-sm-9">
 			    	  <div class="input-group">
-				    	  <input type="text" class="form-control" id="hargabulanan" placeholder="contoh: 1000000" aria-describedby="hargabulananhelp">
+				    	  <input name="hargabulanan" type="text" class="form-control" id="hargabulanan" placeholder="contoh: 1000000" aria-describedby="hargabulananhelp">
 				    	  <div class="input-group-prepend">
 					      	<div class="input-group-text">/bulan</i></div>
 					      </div>
@@ -44,7 +44,7 @@
 			    	<label class="col-form-label col-sm-2" for="hargaharian">Harga harian:</label>
 			    	<div class="col-sm-9">
 			    	  <div class="input-group">
-				    	  <input type="text" class="form-control" id="hargaharian" placeholder="contoh: 200000" aria-describedby="hargaharianhelp">
+				    	  <input name="hargaharian" type="text" class="form-control" id="hargaharian" placeholder="contoh: 200000" aria-describedby="hargaharianhelp">
 				    	  <div class="input-group-prepend">
 					      	<div class="input-group-text">/hari</i></div>
 					      </div>
@@ -55,7 +55,7 @@
 				<div class="form-group row">
 				    <label class="col-form-label col-sm-2" for="ukuranpanjang">Ukuran kamar:</label>
 				    <div class="col-sm-2 input-group">
-				      <input type="text" class="form-control" id="ukuranpanjang" placeholder="panjang">
+				      <input name="ukuranpanjang" type="text" class="form-control" id="ukuranpanjang" placeholder="panjang">
 				      <div class="input-group-prepend">
 				      	<div class="input-group-text">m</i></div>
 				      </div>				      
@@ -64,42 +64,54 @@
 				      x
 				    </div>
 				    <div class="col-sm-2 input-group">
-				      <input type="text" class="form-control" id="ukuranlebar" placeholder="lebar">
+				      <input name="ukuranlebar" type="text" class="form-control" id="ukuranlebar" placeholder="lebar">
 				      <div class="input-group-prepend">
 				      	<div class="input-group-text">m</i></div>
 				      </div>				      
 				    </div>
 				</div>
 				<div class="form-group row">
+			    	<label class="col-form-label col-sm-2" for="dayatampung">Daya tampung kamar:</label>
+			    	<div class="col-sm-9">
+			    	  <div class="input-group">
+				    	  <input name="dayatampung" type="text" class="form-control" id="dayatampung" placeholder="contoh: 2" aria-describedby="hargatahunanhelp">
+				    	  <div class="input-group-prepend">
+					      	<div class="input-group-text">orang</i></div>
+					      </div>
+					  </div>
+			    	  <small id="hargatahunanhelp" class="form-text text-muted"><i>Masukkan angka tanpa tanda pisah apapun</i></small>
+			    	</div>
+			  	</div>
+				<div class="form-group row">
 					<label class="control-form-label col-sm-2" for="fasilitaskost">Fasilitas:</label>
 					<div class="col-sm-9">
 						<div class="input-group">
-							<div class="col-sm-3"><label><input type="checkbox" id="kamarmandi" onclick="showKeteranganFasilitas()"> Kamar mandi</label></div>
-					        <div class="col-sm-4"><input type="text" class="form-control" id="keterangankm" placeholder="Keterangan (luar/dalam)" style="display:none"></div>
+							<div class="col-sm-3"><label><input name="kamarmandi" type="checkbox" id="kamarmandi" onclick="showKeteranganFasilitas()"> Kamar mandi</label></div>
+					        <div class="col-sm-4"><input name="keterangankm" type="text" class="form-control" id="keterangankm" placeholder="Keterangan (luar/dalam)" style="display:none"></div>
 				    	</div>
-				        <div class="col-sm-3"><label><input type="checkbox" id="wifi"> Wi-Fi</label></div>
-				        <div class="col-sm-3"><label><input type="checkbox" id="ac"> AC</label></div>
-				        <div class="col-sm-3"><label><input type="checkbox" id="dapurumum"> Dapur umum</label></div>
+				        <div class="col-sm-3"><label><input name="wifi" type="checkbox" id="wifi"> Wi-Fi</label></div>
+				        <div class="col-sm-3"><label><input name="ac" type="checkbox" id="ac"> AC</label></div>
+				        <div class="col-sm-3"><label><input name="dapurumum" type="checkbox" id="dapurumum"> Dapur umum</label></div>
 				        <div class="input-group">
-					        <div class="col-sm-3"><label><input type="checkbox" id="laundry" onclick="showKeteranganFasilitas()"> Laundry</label></div>
-					        <div class="col-sm-4"><input type="text" class="form-control" id="keteranganlaundry" placeholder="Keterangan" style="display:none"></div>
+					        <div class="col-sm-3"><label><input name="laundry" type="checkbox" id="laundry" onclick="showKeteranganFasilitas()"> Laundry</label></div>
+					        <div class="col-sm-4"><input type="text" name="keteranganlaundry" class="form-control" id="keteranganlaundry" placeholder="Keterangan" style="display:none"></div>
 				    	</div>
 				    	<div class="input-group">
-					        <div class="col-sm-3"><label><input type="checkbox" id="listrik" onclick="showKeteranganFasilitas()"> Listrik</label></div>
-					        <div class="col-sm-4"><input type="text" class="form-control" id="keteranganlistrik" placeholder="Keterangan" style="display:none"></div>
+					        <div class="col-sm-3"><label><input name="listrik" type="checkbox" id="listrik" onclick="showKeteranganFasilitas()"> Listrik</label></div>
+					        <div class="col-sm-4"><input name="keteranganlistrik" type="text" class="form-control" id="keteranganlistrik" placeholder="Keterangan" style="display:none"></div>
 				    	</div>
-				        <div class="col-sm-3"><label><input type="checkbox" id="kasur"> Kasur</label></div>
-				        <div class="col-sm-3"><label><input type="checkbox" id="meja"> Meja</label></div>
-				        <div class="col-sm-3"><label><input type="checkbox" id="kursi"> Kursi</label></div>
-				        <div class="col-sm-3"><label><input type="checkbox" id="lemari"> Lemari</label></div>
-				        <div class="col-sm-3"><label><input type="checkbox" id="rak"> Rak</label></div>
+				        <div class="col-sm-3"><label><input name="kasur" type="checkbox" id="kasur"> Kasur</label></div>
+				        <div class="col-sm-3"><label><input name="meja" type="checkbox" id="meja"> Meja</label></div>
+				        <div class="col-sm-3"><label><input name="kursi" type="checkbox" id="kursi"> Kursi</label></div>
+				        <div class="col-sm-3"><label><input name="lemari" type="checkbox" id="lemari"> Lemari</label></div>
+				        <div class="col-sm-3"><label><input name="rak" type="checkbox" id="rak"> Rak</label></div>
 			    	</div>
 				</div>
 				<div class="form-group row"> 
-				    <label class="col-form-label col-sm-2" for="hargaharian">Deskripsi tambahan:</label>
+				    <label class="col-form-label col-sm-2" for="deskripsi">Deskripsi tambahan:</label>
 			    	<div class="col-sm-9">
 			    	  <div class="input-group">
-				    	  <textarea rows="5" class="form-control" id="deskripsi" placeholder="Masukkan deskripsi lain yang ingin ditambahkan"></textarea>
+				    	  <textarea name="deskripsi" rows="5" class="form-control" id="deskripsi" placeholder="Masukkan deskripsi lain yang ingin ditambahkan"></textarea>
 					  </div>
 			    	</div>
 				</div>

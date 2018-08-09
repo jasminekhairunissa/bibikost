@@ -16,8 +16,9 @@ class CreateKosanTable extends Migration
         Schema::create('kosan', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('id_properti');
-            $table->integer('harga');
-            $table->string('tipekamar');
+            $table->integer('hargatahunan');
+            $table->integer('hargabulanan');
+            $table->integer('hargaharian');
             $table->string('dayatampung');
             $table->string('ukurankamar');
             $table->string('fasilitas');

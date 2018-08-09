@@ -38,4 +38,5 @@ Route::get('isidetailkost', function () {
 Route::get('daftarproperti', function () {
     return view('pages.daftarproperti');
 });
-Route::resource('post', 'PostController');
+
+Route::post('daftarproperti', 'PropertiController@add')->name('prop.store');
