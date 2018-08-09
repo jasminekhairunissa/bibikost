@@ -40,6 +40,7 @@ Route::get('daftarproperti', function () {
 });
 
 Route::post('daftarproperti', 'PropertiController@add')->name('prop.store');
+Route::post('{prop}/isidetailkost', 'KosanController@add')->name('kos.store');
 
 Route::get('register', function () {
     return view('pages.register');

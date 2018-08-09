@@ -19,11 +19,12 @@ class PropertiController extends Controller
 
     	$prop = Properti::create([
     		'id',
-	        'id_pemillik' => 'abc',
+	        'id_pemillik',
 	        'nama' => request('namaprop'),
 	        'alamat' => request('alamatprop'),
     	]);
     	dd($prop);
+
     }
     public function edit(){
 

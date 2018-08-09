@@ -15,7 +15,7 @@ class CreatePropertiTable extends Migration
     {
         Schema::create('properti', function (Blueprint $table) {
             $table->increments('id');
-            $table->unsignedInteger('id_pemilik');
+            $table->unsignedInteger('id_pemilik')->nullable();
             $table->string('nama');
             $table->string('alamat');
             $table->float('jarak')->nullable();

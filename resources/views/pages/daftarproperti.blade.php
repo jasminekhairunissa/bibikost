@@ -15,6 +15,7 @@
     <div class="row">
         <div class="col-md-8 offset-md-1 pt-2">
 			<form action="{{route('prop.store')}}" method="POST">
+			  @csrf
 			  <div class="form-group row">
 			    <label class="col-form-label col-sm-2" for="tipeprop">Tipe properti:</label>
 			    <div class="col-sm-10">
@@ -48,7 +49,7 @@
 			  </div>
 			  <div class="form-group row"> 
 			    <div class="col-sm-offset-2 col-sm-10">
-			      <button name="submitprop" id="submitprop" type="submit" class="btn btn-default">Submit</button>
+			      <button name="submitprop" id="submitprop" type="submit" class="btn btn-default" disabled>Submit</button>
 			    </div>
 			  </div>
 			</form>

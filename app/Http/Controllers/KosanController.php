@@ -12,7 +12,7 @@ class KosanController extends Controller
     public function display(){
 
     }
-    public function add(Properti $properti){
+    public function add(Properti $prop){
     	if(request('kamarmandi') !== null) {
     		$fasilitas = request('kamarmandi').":".request('keterangankm').",";
     	}
@@ -47,22 +47,25 @@ class KosanController extends Controller
     		$fasilitas = $fasilitas.request('rak');
     	}
 
+    	$uk_kamar = request('ukuranpanjang').'x'.request('ukuranlebar')
+
     	$this->validate(request(), [
             'hargatahunan' => 'required|integer|max:255',
             'hargabulanan' => 'required|integer|max:255',
             'hargaharian' => 'required|integer|max:255',
             'dayatampung' => 'required|integer|max:255',
-            'ukurankamar' => 'required|integer|max:255',
+            'ukuranpanjang' => 'required|integer|max:255',
+            'ukuranlebar' => 'required|integer|max:255',
         ]);
 
     	$kos = Kosan::create([
     		'id',
-	        'id_properti' => $properti->id,
+	        'id_properti' => $prop->id,
 	        'hargatahunan' => request('hargatahunan'),
 	        'hargatahunan' => request('hargabulanan'),
 	        'hargatahunan' => request('hargaharian'),
 	        'dayatampung' => request('dayatampung'),
-	        'ukurankamar' => request('ukurankamar'),
+	        'ukurankamar' => $uk_kamar,
 	        'fasilitas' => $fasilitas,
     	]);
     	dd($kos);

@@ -6,10 +6,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Kosan extends Model
 {
+    public $table="Kosan";
     protected $fillable=[
 		'id',
         'id_properti',
-        'harga',
+        'hargatahunan',
+        'hargabulanan',
+        'hargaharian',
         'dayatampung',
         'ukurankamar',
         'fasilitas',

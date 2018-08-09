@@ -8,14 +8,15 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-    <title>Daftar Properti - Bibikost</title>
+    <title>Isi Detail Properti - Bibikost</title>
   </head>
   <body>
     <div class="container-fluid">
    	<h1>Tipe Kamar (id)</h1>
     <div class="row">
         <div class="col-md-9 offset-md-1">
-			<form action="/action_page.php">
+			<form action="{{route('kos.store',$prop)}}">
+				@csrf
 			 	<div class="form-group row">
 			    	<label class="col-form-label col-sm-2" for="hargatahunan">Harga tahunan:</label>
 			    	<div class="col-sm-9">
