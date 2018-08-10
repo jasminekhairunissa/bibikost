@@ -15,7 +15,8 @@
     <div class="checkbox">
       <label><input type="checkbox" name="remember"> Remember me</label>
     </div>
-    <button type="submit" class="btn btn-default">Submit</button>
+    <button name="submitbtn" value="pencari" type="submit" class="btn btn-default">Login sebagai pencari</button>
+    <button name="submitbtn" value="pemilik" type="submit" class="btn btn-default">Login sebagai pemilik</button>
   </form>
 </div>
 </div>

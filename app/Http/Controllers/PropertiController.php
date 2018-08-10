@@ -25,10 +25,9 @@ class PropertiController extends Controller
 	        'tipe_prop'=>request('tipe_prop')
     	]);
     	if($prop->tipe_prop == 0)
-    		//return redirect('properti/'.$prop->id.'/isidetailkost')->with('prop', $prop);
     		return redirect()->route('kos.create',compact('prop'));
     	else if($prop->tipe_prop == 1)
-    		return redirect('properti/'.$prop->id.'/isidetailkontrakan')->with('prop', $prop);
+    		return redirect()->route('kontrakan.create',compact('prop'));
 
     }
     public function edit(){
