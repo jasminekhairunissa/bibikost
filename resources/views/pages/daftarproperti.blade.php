@@ -17,11 +17,11 @@
 			<form action="{{route('prop.store')}}" method="POST">
 			  @csrf
 			  <div class="form-group row">
-			    <label class="col-form-label col-sm-2" for="tipeprop">Tipe properti:</label>
+			    <label class="col-form-label col-sm-2" for="tipe_prop">Tipe properti:</label>
 			    <div class="col-sm-10">
-			      <select name="tipeprop" class="form-control" id="tipeprop">
-			      	<option>Kost</option>
-			      	<option>Kontrakan</option>
+			      <select name="tipe_prop" class="form-control" id="tipe_prop">
+			      	<option value="0">Kost</option>
+			      	<option value="1">Kontrakan</option>
 			      	<!--<option>Toko</option>-->
 			      </select>
 			    </div>

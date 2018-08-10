@@ -14,7 +14,6 @@ class PropertiController extends Controller
     public function add(){
     	$this->validate(request(), [
             'namaprop' => 'required|string|max:255',
-            'tipeprop' => 'required|string|max:255',
         ]);
 
     	$prop = Properti::create([
@@ -22,8 +21,14 @@ class PropertiController extends Controller
 	        'id_pemillik',
 	        'nama' => request('namaprop'),
 	        'alamat' => request('alamatprop'),
+	        //tipe properti
+	        'tipe_prop'=>request('tipe_prop')
     	]);
-    	dd($prop);
+    	if($prop->tipe_prop == 0)
+    		//return redirect('properti/'.$prop->id.'/isidetailkost')->with('prop', $prop);
+    		return redirect()->route('kos.create',compact('prop'));
+    	else if($prop->tipe_prop == 1)
+    		return redirect('properti/'.$prop->id.'/isidetailkontrakan')->with('prop', $prop);
 
     }
     public function edit(){

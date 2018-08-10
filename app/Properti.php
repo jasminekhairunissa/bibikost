@@ -10,6 +10,7 @@ class Properti extends Model
     protected $fillable=[
     	'id',
     	'id_pemilik',
+        'tipe_prop',
     	'nama',
     	'alamat',
     	'jarak'

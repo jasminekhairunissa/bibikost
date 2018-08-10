@@ -12,42 +12,45 @@ class KosanController extends Controller
     public function display(){
 
     }
-    public function add(Properti $prop){
+    public function create(Properti $prop){
+    	return view('pages.isidetailkost', compact('prop'));
+    }
+    public function store(Request $request, Properti $prop){
     	if(request('kamarmandi') !== null) {
-    		$fasilitas = request('kamarmandi').":".request('keterangankm').",";
+    		$fasilitas = "kamarmandi".":".request('keterangankm').",";
     	}
     	if(request('wifi') !== null) {
-    		$fasilitas = $fasilitas.request('wifi').",";
+    		$fasilitas = "wifi".",";
     	}
     	if(request('ac') !== null) {
-    		$fasilitas = $fasilitas.request('ac').",";
+    		$fasilitas = $fasilitas."ac".",";
     	}
     	if(request('dapurumum') !== null) {
-    		$fasilitas = $fasilitas.request('dapurumum').",";
+    		$fasilitas = $fasilitas."dapurumum".",";
     	}
     	if(request('laundry') !== null) {
-    		$fasilitas = $fasilitas.request('laundry').":".request('keteranganlaundry').",";
+    		$fasilitas = $fasilitas."laundry".":".request('keteranganlaundry').",";
     	}
     	if(request('listrik') !== null) {
-    		$fasilitas = $fasilitas.request('listrik').":".request('keteranganlistrik').",";
+    		$fasilitas = $fasilitas."listrik".":".request('keteranganlistrik').",";
     	}
     	if(request('kasur') !== null) {
-    		$fasilitas = $fasilitas.request('kasur').",";
+    		$fasilitas = $fasilitas."kasur".",";
     	}
     	if(request('meja') !== null) {
-    		$fasilitas = $fasilitas.request('meja').",";
+    		$fasilitas = $fasilitas."meja".",";
     	}
     	if(request('kursi') !== null) {
-    		$fasilitas = $fasilitas.request('kursi').",";
+    		$fasilitas = $fasilitas."kursi".",";
     	}
     	if(request('lemari') !== null) {
-    		$fasilitas = $fasilitas.request('lemari').",";
+    		$fasilitas = $fasilitas."lemari".",";
     	}
     	if(request('rak') !== null) {
-    		$fasilitas = $fasilitas.request('rak');
+    		$fasilitas = $fasilitas."rak";
     	}
 
-    	$uk_kamar = request('ukuranpanjang').'x'.request('ukuranlebar')
+    	$uk_kamar = request('ukuranpanjang').'x'.request('ukuranlebar');
 
     	$this->validate(request(), [
             'hargatahunan' => 'required|integer|max:255',
@@ -62,8 +65,8 @@ class KosanController extends Controller
     		'id',
 	        'id_properti' => $prop->id,
 	        'hargatahunan' => request('hargatahunan'),
-	        'hargatahunan' => request('hargabulanan'),
-	        'hargatahunan' => request('hargaharian'),
+	        'hargabulanan' => request('hargabulanan'),
+	        'hargaharian' => request('hargaharian'),
 	        'dayatampung' => request('dayatampung'),
 	        'ukurankamar' => $uk_kamar,
 	        'fasilitas' => $fasilitas,

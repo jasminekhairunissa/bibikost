@@ -12,10 +12,10 @@
   </head>
   <body>
     <div class="container-fluid">
-   	<h1>Tipe Kamar (id)</h1>
+   	<h1>Tipe Kamar {{$prop->nama}}</h1>
     <div class="row">
         <div class="col-md-9 offset-md-1">
-			<form action="{{route('kos.store',$prop)}}">
+			<form action="{{route('kos.store',$prop)}}" method="POST">
 				@csrf
 			 	<div class="form-group row">
 			    	<label class="col-form-label col-sm-2" for="hargatahunan">Harga tahunan:</label>
