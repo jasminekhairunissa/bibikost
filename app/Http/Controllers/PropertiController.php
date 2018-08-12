@@ -27,7 +27,7 @@ class PropertiController extends Controller
     	if($prop->tipe_prop == 0)
     		return redirect()->route('kos.create',compact('prop'));
     	else if($prop->tipe_prop == 1)
-    		return redirect()->route('kontrakan.create',compact('prop'));
+    		return redirect()->route('kontrak.create',compact('prop'));
 
     }
     public function edit(){

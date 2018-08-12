@@ -46,5 +46,5 @@ class LoginController extends Controller
             $role = 1;
             return redirect()->route('home',compact('role'));
         };*/
-    };
-}
+};
+

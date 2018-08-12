@@ -10,7 +10,9 @@ class Kontrakan extends Model
     protected $fillable=[
 		'id',
         'id_properti',
-        'harga',
+        'hargatahunan',
+        'jumlahkamar',
+        'jumlahkamarmandi',
         'ukuranbangunan',
         'fasilitas'
     ];

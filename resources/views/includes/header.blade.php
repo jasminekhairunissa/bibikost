@@ -2,7 +2,7 @@
   <div class="container-fluid">
     <div class="navbar-header">
       <a class="navbar-brand" href="{{ url('/')}}">
-        <img class="img-responsive "alt="BibiKost" src="bkheaderlogo.png">
+        <img class="img-responsive "alt="BibiKost" src="{{ asset('bkheaderlogo.png') }}">
       </a>
     </div>
     <ul class="nav navbar-nav">
