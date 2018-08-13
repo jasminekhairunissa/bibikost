@@ -53,4 +53,12 @@ Route::get('registerpencari', function () {
     return view('pages.registerpencari');
 });
 
+Route::get('loginpemilik', function () {
+    return view('pages.loginpemilik');
+});
+
+Route::get('loginpencari', function () {
+    return view('pages.loginpencari');
+});
+
 Route::resource('post', 'PostController');
