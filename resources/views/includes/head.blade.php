@@ -51,6 +51,9 @@
       background-color: black;
       border-radius: 5px;
     }
+    .nav {
+      right: 20px;
+    }
     .buttonlogreg:hover {
       background-color: #252626;
     }
@@ -91,7 +94,7 @@
       position: absolute;
       margin: auto;
       color: white;
-      padding-bottom: 20px;    
+      padding-bottom: 20px;
     }
     .card-body {
       padding: 10px;

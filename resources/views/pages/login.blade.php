@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 @extends('layouts.default')
 @section('content')
 <div class="container">
@@ -27,8 +26,4 @@
   </div>
 </div>
 </div>
-=======
-@extends ('layouts/default')
-@section ('content')
->>>>>>> 60985ab0fc14333b82892f745e61b5bd23f8b84a
 @stop
