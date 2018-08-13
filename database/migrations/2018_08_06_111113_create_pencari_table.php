@@ -14,17 +14,13 @@ class CreatePencariTable extends Migration
     public function up()
     {
         Schema::create('pencari', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('email')->unique();
-            $table->string('password');
+            $table->unsignedInteger('id_pencari');
             $table->rememberToken();
-            $table->string('nama');
-            $table->string('ttl');
             $table->string('univ');
             $table->string('jurusan');
             $table->integer('angkatan');
-            $table->string('foto')->nullable();
             $table->timestamps();
+            $table->foreign('id_pencari')->references('id')->on('users')->onDelete('CASCADE');
         });
     }
 

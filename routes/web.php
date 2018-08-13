@@ -31,13 +31,15 @@ Route::get('carikosan', function () {
     return view('pages.carikosan');
 });
 
-Route::get('isidetailkost', function () {
-    return view('pages.isidetailkost');
-});
-
 Route::get('daftarproperti', function () {
     return view('pages.daftarproperti');
 });
+
+Route::post('daftarproperti', 'PropertiController@add')->name('prop.store');
+Route::get('properti/{prop}/isidetailkost', 'KosanController@create')->name('kos.create');
+Route::post('properti/{prop}/isidetailkost/save', 'KosanController@store')->name('kos.store');
+Route::get('properti/{prop}/isidetailkontrakan', 'KontrakanController@create')->name('kontrak.create');
+Route::post('properti/{prop}/isidetailkontrakan/save', 'KontrakanController@store')->name('kontrak.store');
 
 Route::get('register', function () {
     return view('pages.register');

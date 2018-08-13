@@ -16,16 +16,18 @@
       font-family: "Lato", sans-serif;
       background-repeat: no-repeat;
       background-size: cover;
-      background-image: url("room4.png");
+      background-image: url("{{ asset('room4.png') }}");
       background-position: center;
+      background-attachment: fixed;
 
     }
     .bg {
       background-repeat: no-repeat;
       background-size: cover;
-      background-image: url("room4.png");
+      background-image: url("{{ asset('room4.png') }}");
       height: 100%;
       background-position: center;
+      background-attachment: fixed;
     }
     .button {
       background-color: #131F28;

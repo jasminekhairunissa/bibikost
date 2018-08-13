@@ -14,17 +14,12 @@ class CreatePemilikTable extends Migration
     public function up()
     {
         Schema::create('pemilik', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('email')->unique();
-            $table->string('password');
+            $table->unsignedInteger('id_pemilik');
             $table->rememberToken();
-            $table->string('nama');
-            $table->string('ttl');
             $table->string('ktp');
             $table->string('alamat');
-            $table->string('no_telp');
-            $table->string('foto')->nullable();
             $table->timestamps();
+            $table->foreign('id_pemilik')->references('id')->on('users')->onDelete('CASCADE');
         });
     }
 

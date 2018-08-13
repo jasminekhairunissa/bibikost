@@ -6,10 +6,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Kontrakan extends Model
 {
+    public $table="Kontrakan";
     protected $fillable=[
 		'id',
         'id_properti',
-        'harga',
+        'hargatahunan',
+        'jumlahkamar',
+        'jumlahkamarmandi',
         'ukuranbangunan',
         'fasilitas'
     ];
