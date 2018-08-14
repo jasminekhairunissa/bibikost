@@ -16,7 +16,9 @@ class CreateKontrakanTable extends Migration
         Schema::create('kontrakan', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('id_properti');
-            $table->integer('harga');
+            $table->integer('hargatahunan');
+            $table->string('jumlahkamar');
+            $table->string('jumlahkamarmandi');
             $table->string('ukuranbangunan');
             $table->string('fasilitas');
             $table->timestamps();

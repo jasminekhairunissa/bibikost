@@ -44,6 +44,7 @@ Route::get('carikosan', function () {
     return view('pages.carikosan');
 });
 
+
 Route::get('bergabung', function() {return view('auth.registerpilihan');})->name('bergabung');
 
 Route::get('register-pemilik', 'auth\PemilikRegisterController@showRegistrationPemilikForm')->name('register.pemilik');

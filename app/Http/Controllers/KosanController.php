@@ -22,6 +22,7 @@ class KosanController extends Controller
     }
     public function store(Request $request, Properti $prop){
         $fasilitas = "Tidak ada";
+
     	if(request('kamarmandi') !== null) {
     		$fasilitas = "kamarmandi".":".request('keterangankm').",";
     	}

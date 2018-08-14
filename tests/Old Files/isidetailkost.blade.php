@@ -1,34 +1,17 @@
 @extends('layouts.default')
 @section('content')
     <div class="container-fluid">
-    @if($errors->any())
-      <div class="alert alert-danger">
-        <ul>
-            @foreach ($errors->all() as $error)
-              <li>{{ $error }}</li>
-            @endforeach
-        </ul>
-      </div>
-  	@endif
    	<h1>Tipe Kamar {{$prop->nama}}</h1>
     <div class="row">
-        <div class="col-md-9 offset-md-1">
+        <div class="col-md-10 offset-md-2">
 			<form action="{{route('kos.store',$prop)}}" method="POST">
 				@csrf
 			 	<div class="form-group row">
 			    	<label class="col-form-label col-sm-2" for="hargatahunan">Harga tahunan:</label>
 			    	<div class="col-sm-9">
 			    	  <div class="input-group">
-				    	  <input name="hargatahunan" type="text" class="form-control" id="hargatahunan" placeholder="contoh: 7000000" aria-describedby="hargatahunanhelp" required>
-
-				    	  @if ($errors->has('hargatahunan'))
-					        @foreach ($errors->get('hargatahunan') as $error)
-					          <span class="invalid-feedback">
-					              <strong>{{ $error }}</strong>
-					          </span>
-					        @endforeach
-					      @endif
-				    	  <div class="input-group-prepend">
+				    	  <input name="hargatahunan" type="text" class="form-control" id="hargatahunan" placeholder="contoh: 7000000" aria-describedby="hargatahunanhelp">
+				    	  <div class="input-group-addon">
 					      	<div class="input-group-text">/tahun</i></div>
 					      </div>
 					  </div>
@@ -39,16 +22,8 @@
 			    	<label class="col-form-label col-sm-2" for="hargabulanan">Harga bulanan:</label>
 			    	<div class="col-sm-9">
 			    	  <div class="input-group">
-				    	  <input name="hargabulanan" type="text" class="form-control" id="hargabulanan" placeholder="contoh: 1000000" aria-describedby="hargabulananhelp" required>
-
-				    	  @if ($errors->has('hargabulanan'))
-					        @foreach ($errors->get('hargabulanan') as $error)
-					          <span class="invalid-feedback">
-					              <strong>{{ $error }}</strong>
-					          </span>
-					        @endforeach
-					      @endif
-				    	  <div class="input-group-prepend">
+				    	  <input name="hargabulanan" type="text" class="form-control" id="hargabulanan" placeholder="contoh: 1000000" aria-describedby="hargabulananhelp">
+				    	  <div class="input-group-addon">
 					      	<div class="input-group-text">/bulan</i></div>
 					      </div>
 					  </div>
@@ -59,15 +34,8 @@
 			    	<label class="col-form-label col-sm-2" for="hargaharian">Harga harian:</label>
 			    	<div class="col-sm-9">
 			    	  <div class="input-group">
-				    	  <input name="hargaharian" type="text" class="form-control" id="hargaharian" placeholder="contoh: 200000" aria-describedby="hargaharianhelp" required>
-				    	  @if ($errors->has('hargaharian'))
-					        @foreach ($errors->get('hargaharian') as $error)
-					          <span class="invalid-feedback">
-					              <strong>{{ $error }}</strong>
-					          </span>
-					        @endforeach
-					      @endif
-				    	  <div class="input-group-prepend">
+				    	  <input name="hargaharian" type="text" class="form-control" id="hargaharian" placeholder="contoh: 200000" aria-describedby="hargaharianhelp">
+				    	  <div class="input-group-addon">
 					      	<div class="input-group-text">/hari</i></div>
 					      </div>
 					  </div>
@@ -77,15 +45,8 @@
 				<div class="form-group row">
 				    <label class="col-form-label col-sm-2" for="ukuranpanjang">Ukuran kamar:</label>
 				    <div class="col-sm-2 input-group">
-				      <input name="ukuranpanjang" type="text" class="form-control" id="ukuranpanjang" placeholder="panjang" required>
-				      @if ($errors->has('ukuranpanjang'))
-					        @foreach ($errors->get('ukuranpanjang') as $error)
-					          <span class="invalid-feedback">
-					              <strong>{{ $error }}</strong>
-					          </span>
-				        @endforeach
-				      @endif
-				      <div class="input-group-prepend">
+				      <input name="ukuranpanjang" type="text" class="form-control" id="ukuranpanjang" placeholder="panjang">
+				      <div class="input-group-addon">
 				      	<div class="input-group-text">m</i></div>
 				      </div>				      
 				    </div>
@@ -93,15 +54,8 @@
 				      x
 				    </div>
 				    <div class="col-sm-2 input-group">
-				      <input name="ukuranlebar" type="text" class="form-control" id="ukuranlebar" placeholder="lebar" required>
-				      @if ($errors->has('ukuranlebar'))
-				        @foreach ($errors->get('ukuranlebar') as $error)
-				          <span class="invalid-feedback">
-				              <strong>{{ $error }}</strong>
-				          </span>
-				        @endforeach
-				      @endif
-				      <div class="input-group-prepend">
+				      <input name="ukuranlebar" type="text" class="form-control" id="ukuranlebar" placeholder="lebar">
+				      <div class="input-group-addon">
 				      	<div class="input-group-text">m</i></div>
 				      </div>				      
 				    </div>
@@ -110,15 +64,8 @@
 			    	<label class="col-form-label col-sm-2" for="dayatampung">Daya tampung kamar:</label>
 			    	<div class="col-sm-9">
 			    	  <div class="input-group">
-				    	  <input name="dayatampung" type="text" class="form-control" id="dayatampung" placeholder="contoh: 2" aria-describedby="hargatahunanhelp" required>
-				    	  @if ($errors->has('dayatampung'))
-					        @foreach ($errors->get('dayatampung') as $error)
-					          <span class="invalid-feedback">
-					              <strong>{{ $error }}</strong>
-					          </span>
-					        @endforeach
-					      @endif
-				    	  <div class="input-group-prepend">
+				    	  <input name="dayatampung" type="text" class="form-control" id="dayatampung" placeholder="contoh: 2" aria-describedby="hargatahunanhelp">
+				    	  <div class="input-group-addon">
 					      	<div class="input-group-text">orang</i></div>
 					      </div>
 					  </div>
