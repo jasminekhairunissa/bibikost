@@ -5,7 +5,7 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class User extends Authenticatable
+class Pencari extends Authenticatable
 {
     public $table="Pencari";
     use Notifiable;
@@ -16,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'nama', 'email', 'password', 'ttl', 'univ', 'jurusan', 'angkatan', 'foto'
+        'nama', 'email', 'password', 'ttl', 'univ', 'jurusan', 'angkatan', 'no_telp', 'foto'
     ];
 
     /**

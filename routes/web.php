@@ -15,9 +15,22 @@ Route::get('/', function () {
     return view('pages.home');
 });
 
-Route::get('login', function () {
-    return view('pages.login');
+Auth::routes();
+
+Route::get('/', function () {
+    return redirect()->route('home.pemilik');
 });
+Route::get('/home', function() {
+    return view('pages.homepemilik');
+})->name('home.pemilik');
+Route::get('{prop}/isidetailkost', 'KosanController@create')->name('kos.create');
+Route::post('{prop}/isidetailkost', 'KosanController@store')->name('kos.store');
+Route::get('/daftarproperti', 'PropertiController@create')->name('prop.create');
+Route::post('daftarproperti', 'PropertiController@store')->name('prop.store');
+Route::get('/', 'Auth\PemilikLoginController@logoutpemilik')->name('logout.pemilik');
+
+Route::get('login-pemilik', function() {return redirect()->route('login');});
+Route::post('login-pemilik', 'Auth\PemilikLoginController@login')->name('login.pemilik');
 
 Route::get('aboutus', function () {
     return view('pages.aboutus');
@@ -31,29 +44,7 @@ Route::get('carikosan', function () {
     return view('pages.carikosan');
 });
 
-Route::get('isidetailkost', function () {
-    return view('pages.isidetailkost');
-});
+Route::get('bergabung', function() {return view('auth.registerpilihan');})->name('bergabung');
 
-Route::get('daftarproperti', function () {
-    return view('pages.daftarproperti');
-});
-
-Route::post('daftarproperti', 'PropertiController@add')->name('prop.store');
-Route::get('{prop}/isidetailkost', 'KosanController@create')->name('kos.create');
-Route::post('{prop}/isidetailkost', 'KosanController@store')->name('kos.store');
-
-
-Route::get('register', function () {
-    return view('pages.register');
-});
-
-Route::get('registerpemilik', function () {
-    return view('pages.registerpemilik');
-});
-
-Route::get('registerpencari', function () {
-    return view('pages.registerpencari');
-});
-
-Route::resource('post', 'PostController');
+Route::get('register-pemilik', 'auth\PemilikRegisterController@showRegistrationPemilikForm')->name('register.pemilik');
+Route::post('register-pemilik', 'auth\PemilikRegisterController@register')->name('register.pemilik.store');

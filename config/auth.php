@@ -14,7 +14,8 @@ return [
     */
 
     'defaults' => [
-        'guard' => 'web',
+        'guard' => 'web', //aslinya ini defaultnya, cuma diganti jadi 'pencari'. di guards 'web' juga diganti jadi pemilik
+        //'guard' => 'pencari',
         'passwords' => 'users',
     ],
 
@@ -45,6 +46,16 @@ return [
             'driver' => 'token',
             'provider' => 'users',
         ],
+
+        'pemilik' => [
+            'driver' => 'session',
+            'provider' => 'pemilik',
+        ],
+
+        'pemilik-api' => [
+            'driver' => 'token',
+            'provider' => 'pemilik',
+        ],
     ],
 
     /*
@@ -67,7 +78,12 @@ return [
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
-            'model' => App\User::class,
+            'model' => App\Pencari::class,
+        ],
+
+        'pemilik' => [
+            'driver' => 'eloquent',
+            'model' => App\Pemilik::class,
         ],
 
         // 'users' => [
@@ -94,6 +110,12 @@ return [
     'passwords' => [
         'users' => [
             'provider' => 'users',
+            'table' => 'password_resets',
+            'expire' => 60,
+        ],
+
+        'pemilik' => [
+            'provider' => 'pemilik',
             'table' => 'password_resets',
             'expire' => 60,
         ],

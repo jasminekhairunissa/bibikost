@@ -8,17 +8,26 @@ use App\Http\Controllers\Controller;
 
 class PropertiController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth:pemilik');
+    }
+
     public function display(){
 
     }
-    public function add(){
+    public function create(){
+        return view('pages.daftarproperti');
+    }
+    public function store(){
     	$this->validate(request(), [
             'namaprop' => 'required|string|max:255',
+            'alamat' => request('alamatprop'),
         ]);
 
     	$prop = Properti::create([
     		'id',
-	        'id_pemillik',
+	        'id_pemillik' => auth()->id(),
 	        'nama' => request('namaprop'),
 	        'alamat' => request('alamatprop'),
 	        //tipe properti

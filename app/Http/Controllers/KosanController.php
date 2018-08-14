@@ -9,6 +9,11 @@ use App\Http\Controllers\Controller;
 
 class KosanController extends Controller
 {
+    public function __constructor()
+    {
+        $this->middleware('auth:pemilik');
+    }
+
     public function display(){
 
     }
@@ -16,6 +21,7 @@ class KosanController extends Controller
     	return view('pages.isidetailkost', compact('prop'));
     }
     public function store(Request $request, Properti $prop){
+        $fasilitas = "Tidak ada";
     	if(request('kamarmandi') !== null) {
     		$fasilitas = "kamarmandi".":".request('keterangankm').",";
     	}
@@ -53,12 +59,12 @@ class KosanController extends Controller
     	$uk_kamar = request('ukuranpanjang').'x'.request('ukuranlebar');
 
     	$this->validate(request(), [
-            'hargatahunan' => 'required|integer|max:255',
-            'hargabulanan' => 'required|integer|max:255',
-            'hargaharian' => 'required|integer|max:255',
-            'dayatampung' => 'required|integer|max:255',
-            'ukuranpanjang' => 'required|integer|max:255',
-            'ukuranlebar' => 'required|integer|max:255',
+            'hargatahunan' => 'required|integer',
+            'hargabulanan' => 'required|integer',
+            'hargaharian' => 'required|integer',
+            'dayatampung' => 'required|integer',
+            'ukuranpanjang' => 'required|integer',
+            'ukuranlebar' => 'required|integer',
         ]);
 
     	$kos = Kosan::create([
@@ -70,6 +76,7 @@ class KosanController extends Controller
 	        'dayatampung' => request('dayatampung'),
 	        'ukurankamar' => $uk_kamar,
 	        'fasilitas' => $fasilitas,
+            'deskripsi' => request('deskripsi'),
     	]);
     	dd($kos);
     }

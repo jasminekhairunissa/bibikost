@@ -22,6 +22,7 @@ class CreateKosanTable extends Migration
             $table->string('dayatampung');
             $table->string('ukurankamar');
             $table->string('fasilitas');
+            $table->string('deskripsi');
             $table->timestamps();
         });
     }

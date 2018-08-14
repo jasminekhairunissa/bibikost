@@ -35,6 +35,7 @@ class LoginController extends Controller
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
+        $this->middleware('guest:pemilik')->except('logoutpemilik');
     }
 
     /*public function decide() {
@@ -46,5 +47,4 @@ class LoginController extends Controller
             $role = 1;
             return redirect()->route('home',compact('role'));
         };*/
-    };
 }
