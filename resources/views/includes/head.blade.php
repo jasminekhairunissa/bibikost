@@ -99,6 +99,21 @@
       transform: translate(50%, 100%);
       margin: auto;
     }
+        .containercard {
+      width: 300px;
+      height: auto;
+      margin-left: 10px;
+      margin-right: 10px;
+      margin-top: 5px;
+      margin-bottom: 5px;
+
+    }
+    .card {
+      border-radius: 20px;
+    }
+    .card-img-top {
+      border-radius: 20px;
+    }
     .card2 {
       float: none;
       display: block;
