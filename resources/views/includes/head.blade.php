@@ -33,15 +33,9 @@
       background-image: url("{{ asset('room4.png') }}");
       background-position: center;
       background-attachment: fixed;
+      display: grid;
+      align-items: center;
 
-    }
-    .bg {
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-image: url("{{ asset('room4.png') }}");
-      height: 100%;
-      background-position: center;
-      background-attachment: fixed;
     }
     .button {
       background-color: #131F28;
@@ -55,6 +49,7 @@
       margin: 4px 2px;
       cursor: pointer;
       border-radius: 10px;
+      left: 0px;
     }
     .buttonlogreg {
       padding: 15px 32px;
@@ -86,10 +81,10 @@
     }
     .signin {
       position: relative;
-      top: 50px;
       text-align: center;
+      top: 50px;
     }
-    .col-sm-5 {
+    .col-sm-7 {
       float: none;
       display: block;
       background-color: rgba(0,0,0,0.5);
@@ -99,7 +94,24 @@
       transform: translate(50%, 100%);
       margin: auto;
     }
-        .containercard {
+    .card2 {
+      float: none;
+      display: block;
+      background-color: rgba(0,0,0,0.5);
+      border-radius: 10px;
+      position: fixed;
+      top: 80px;
+      color: white;
+      padding-bottom: 20px;
+    }
+    .card-body {
+      padding: 10px;
+      text-align: center;
+    }
+    .col-sm-8 {
+
+    }
+    .containercard {
       width: 300px;
       height: auto;
       margin-left: 10px;
@@ -114,30 +126,10 @@
     .card-img-top {
       border-radius: 20px;
     }
-    .card2 {
-      float: none;
-      display: block;
-      background-color: rgba(0,0,0,0.5);
-      border-radius: 10px;
-      position: absolute;
-      margin: auto;
-      color: white;
-      padding-bottom: 20px;
-    }
-    .card-body {
-      padding: 10px;
-      text-align: center;
-    }
-    .col-sm-8 {
-
-    }
     .logo {
       position: relative;
       text-align: center;
       top: 50px;
-    }
-    .container {
-
     }
     .navbar-brand {
       width:130px;
