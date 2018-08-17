@@ -42,7 +42,7 @@ class PemilikLoginController extends Controller
     	Auth::guard('pemilik')->logout();
     	$request->session()->flush();
     	$request->session()->regenerate();
-    	echo 'logged out';
+    	return view('pages.home');
     }
 }
 

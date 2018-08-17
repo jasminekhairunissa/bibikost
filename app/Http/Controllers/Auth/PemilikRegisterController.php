@@ -20,7 +20,7 @@ class PemilikRegisterController extends Controller
     	return view('auth\registerpemilik');
     }
 
-    public function register()
+    public function register(Request $request)
     {
     	$request->validate([
     		'nama' => 'required|max:255',

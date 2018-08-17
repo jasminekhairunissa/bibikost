@@ -1,10 +1,10 @@
 @extends('layouts.default')
 @section('content')
-@if (session('status'))
+
 <div class="container">
+@if (session('status'))
 <div class="alert alert-danger">
     {{ session('status') }}
-</div>
 </div>
 @endif
     <div class="row">
@@ -15,7 +15,6 @@
       </div>-->
         <form method="POST" action="{{ route('login') }}">
             @csrf
-
             <div class="form-group">
               <label class="col-form-label col-sm-2" for="email">Email:</label>
               <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>

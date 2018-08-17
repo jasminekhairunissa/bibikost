@@ -1,7 +1,12 @@
 @extends('layouts.default')
 @section('content')
-<div class="card2">
+{{-- <div class="card2"> --}}
 <div class="container">
+  <div class="row justify-content-center">
+    <div class="card2">
+      <div class="card-body">
+
+    
   <h2>Daftar sebagai Pemilik</h2>
   <!--@if($errors->any())
       <div class="alert alert-danger">
@@ -109,8 +114,11 @@
               <input type="file">
           </div>
     </div>
-    <button type="submit" class="btn btn-default">Submit</button>
+    <button type="submit" class="btn btn-block btn-default">Submit</button>
   </form>
 </div>
 </div>
+</div>
+</div>
+{{-- </div> --}}
 @stop

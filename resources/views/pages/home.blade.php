@@ -15,17 +15,9 @@
       </div>
   </div>
   <div class="row h-100 justify-content-center align-items-center">
-    <div class="col">
-
-    </div>
-    <div class="col">
       <div class="signin">
         <a href="{{( route('register.pemilik'))}}"><button class="button">Daftar Sekarang!</button>
       </div>
-    </div>
-    <div class="col">
-
-    </div>
   </div>
 </div>
 @stop

@@ -7,5 +7,8 @@ use App\Http\Controllers\Controller;
 
 class PencariController extends Controller
 {
-    $this->middleware('auth:web');
+    public function __construct()
+    {
+    	$this->middleware('auth:web');
+    }
 }
