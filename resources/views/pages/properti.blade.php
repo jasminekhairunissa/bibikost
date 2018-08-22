@@ -1,4 +1,4 @@
-@extends('layouts.defaultpemilik')
+@extends('layouts.default')
 @section('content')
 <div class="card-deck">
   <div class="containercard">

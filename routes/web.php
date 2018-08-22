@@ -10,6 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+use App\Properti;
 
 Route::get('/', function () {
     return view('pages.home');
@@ -21,13 +22,19 @@ Route::get('/', function () {
     return redirect()->route('home.pemilik');
 });
 Route::get('/home', function() {
-    return view('pages.homepemilik');
+    $prop = Properti::where('id_pemilik', Auth::guard('pemilik')->id())->first();
+    //dd($prop);
+    $nama = str_replace(' ', '_', $prop->nama);
+    //dd($nama);
+    return view('pages.homepemilik', ['nama'=>$nama, 'prop'=>$prop]);
 })->name('home.pemilik');
-Route::get('{prop}/isidetailkost', 'KosanController@create')->name('kos.create');
-Route::post('{prop}/isidetailkost', 'KosanController@store')->name('kos.store');
+
+Route::get('properti/{nama}/isidetailkost', 'KosanController@create')->name('kos.create');
+Route::post('properti/{nama}/isidetailkost', 'KosanController@store')->name('kos.store');
 Route::get('/daftarproperti', 'PropertiController@create')->name('prop.create');
 Route::post('daftarproperti', 'PropertiController@store')->name('prop.store');
 Route::get('/', 'Auth\PemilikLoginController@logoutpemilik')->name('logout.pemilik');
+Route::get('properti/{prop}/{nama}', 'PropertiController@show')->name('prop.show');
 
 Route::get('login-pemilik', function() {return redirect()->route('login');});
 Route::post('login-pemilik', 'Auth\PemilikLoginController@login')->name('login.pemilik');

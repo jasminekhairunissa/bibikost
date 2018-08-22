@@ -4,6 +4,7 @@ namespace App\Http\Controllers\auth;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Properti;
 use Auth;
 
 class PemilikLoginController extends Controller
@@ -30,8 +31,8 @@ class PemilikLoginController extends Controller
     	//attempt to login
     	$credentials = $request->only('email', 'password');
 	    if (Auth::guard('pemilik')->attempt($credentials, $request->input('remember'))) { // if successful
-	    	//return redirect()->intended(route('home.pemilik'));
-	    	echo 'a';
+	    	return redirect()->intended(route('home.pemilik', compact('prop')));
+	    	//echo 'a';
 	    }else{
 
 	    return redirect()->back()->withInput($request->except('password'))->with('status', 'Login gagal');}

@@ -8,7 +8,7 @@
 
     
   <h2>Daftar sebagai Pemilik</h2>
-  <!--@if($errors->any())
+  @if($errors->any())
       <div class="alert alert-danger">
         <ul>
             @foreach ($errors->all() as $error)
@@ -16,7 +16,7 @@
             @endforeach
         </ul>
       </div>
-  @endif-->
+  @endif
   <form action="{{ route('register.pemilik.store') }}" method="POST">
     @csrf
     <div class="form-group">
@@ -81,7 +81,7 @@
     </div>
     <div class="form-group">
       <label for="no_telp">Nomor telepon:</label>
-      <input type="text" class="form-control" id="no_telp" placeholder="Enter email" name="no_telp" value="{{ old('no_telp') }}" required>
+      <input type="text" class="form-control" id="no_telp" placeholder="Enter no. telp" name="no_telp" value="{{ old('no_telp') }}" required>
 
       @if ($errors->has('no_telp'))
         @foreach ($errors->get('no_telp') as $error)

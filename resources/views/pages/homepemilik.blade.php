@@ -7,4 +7,7 @@
   <div class="signin">
     <a href="{{( route('logout.pemilik'))}}"><button class="button">Logout</button>
   </div>
+  <div class="signin">
+    <a href="{{( route('prop.show', [$prop, $nama]) )}}"><button class="button">Dashboard Properti</button>
+  </div>
 @stop

@@ -41,8 +41,9 @@ class PemilikRegisterController extends Controller
     		'alamat' => request('alamat'),
     		'no_telp' => request('no_telp'),
     	]);
-    	dd($pemilik);
-    	//auth()->login($pemilik);
-    	//return redirect()->route('home');
+    	//dd($pemilik);
+    	$credentials = $pemilik->only('email', 'password');
+	    if (Auth::guard('pemilik')->attempt($credentials)) { // if successful
+	    	return redirect()->intended(route('home.pemilik'));
     }
 }
