@@ -181,7 +181,7 @@ li span {
 
 <div class="searchbox">
   <div class="dropdown">
-    <button onclick="myFunction()" class="dropbtn">Pilih lokasi..</button>
+    <button onclick="myFunctionLoc()" class="dropbtn">Pilih lokasi..</button>
     <div id="myInputLocation" class="dropdown-content">
       <a href="#">Bara</a>
       <a href="#">Bateng</a>
@@ -214,6 +214,10 @@ function closeNav() {
 toggle between hiding and showing the dropdown content */
 function myFunction() {
     document.getElementById("myDropdown").classList.toggle("show");
+}
+
+function myFunctionLoc() {
+    document.getElementById("myInputLocation").classList.toggle("show");
 }
 
 // Close the dropdown menu if the user clicks outside of it
