@@ -13,7 +13,7 @@
 use App\Properti;
 
 Route::get('/', function () {
-    return view('pages.home');
+    return redirect()->route('login');
 });
 
 Auth::routes();
@@ -21,13 +21,7 @@ Auth::routes();
 Route::get('/', function () {
     return redirect()->route('home.pemilik');
 });
-Route::get('/home', function() {
-    $prop = Properti::where('id_pemilik', Auth::guard('pemilik')->id())->first();
-    //dd($prop);
-    $nama = str_replace(' ', '_', $prop->nama);
-    //dd($nama);
-    return view('pages.homepemilik', ['nama'=>$nama, 'prop'=>$prop]);
-})->name('home.pemilik');
+Route::get('/home', 'HomeController@show')->name('home.pemilik');
 
 Route::get('properti/{nama}/isidetailkost', 'KosanController@create')->name('kos.create');
 Route::post('properti/{nama}/isidetailkost', 'KosanController@store')->name('kos.store');

@@ -152,7 +152,19 @@ li span {
         <div class="micon"></div>
       </span>
     </li>
-    <li class="logout" style="float:right"><a href=aboutus.php>Log Out</a></li>
+    <li class="logout" style="float:right">
+      <a class="dropdown-item" href="{{ route('logout') }}"
+                                     
+        onclick="event.preventDefault();
+                         document.getElementById('logout-form').submit();">
+                         <span class="glyphicon glyphicon-log-out"></span>  
+           Logout
+          
+      </a>
+
+      <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+          @csrf
+      </form></li>
     <li class="tentangkami" style="float:right"><a href="{{ url('/aboutus')}}">Tentang Kami</a></li>
   </ul>
   <div class="box">

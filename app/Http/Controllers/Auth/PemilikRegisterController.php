@@ -45,5 +45,6 @@ class PemilikRegisterController extends Controller
     	$credentials = $pemilik->only('email', 'password');
 	    if (Auth::guard('pemilik')->attempt($credentials)) { // if successful
 	    	return redirect()->intended(route('home.pemilik'));
-    }
+ 	   }
+	}
 }
